@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
    <meta charset="utf-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,34 +9,36 @@
    <title>Capturar Webcam con HTML5 y Javascript</title>
    <link href="./styles.css" rel="stylesheet">
 </head>
+
 <body>
- 
-<!-- Cabecera -->
-<h1>Capturar Webcam con HTML5 y Javascript</h1>
- 
-<!-- Mensaje de error -->
-<span name="errorMsg"></span>
- 
-<!-- Cargar Frame de TV y cargar el video de la webcam -->
-<div id="video_wrap">
-   <div id="video_overlays">
-       <!-- Imagen superpuesta del marco de TV -->
-       <img src="https://www.raulprietofernandez.net/images/blog/218/tv.png"></img>
-   </div> 
-   <!-- Elemento de video donde se mostrará el flujo de la webcam -->
-   <video id="video_frame" playsinline autoplay></video>
-</div>
- 
-<!-- Capturamos la imagen a través de la API web y lo mostramos en el canvas -->
-<div class="button_controller">
-   <!-- Botón para capturar -->
-   <button id="snap_frame">Capturar Imagen</button>
-   <br><br>
-   <!-- Elemento canvas donde se mostrará la imagen capturada -->
-   <canvas id="canvas_frame"></canvas>
-</div>
- 
-<!-- Cargamos el Javascript. El atributo async significa que el script es completamente independiente: El navegador no se bloquea con scripts async (como defer ). Otros scripts no esperan por scripts async , y scripts async no espera por ellos.-->
-<script src="./script.js" async></script>
+
+   <!-- Cabecera -->
+   <h1>Capturar Webcam con HTML5 y Javascript</h1>
+
+   <!-- Mensaje de error -->
+   <span id="errorMsg"></span>
+
+   <!-- Cargar Frame de TV y cargar el video de la webcam -->
+   <div id="video_wrap">
+      <div id="video_overlays">
+         <!-- Imagen superpuesta del marco de TV -->
+         <img src="https://www.raulprietofernandez.net/images/blog/218/tv.png"></img>
+      </div>
+      <!-- Elemento de video donde se mostrará el flujo de la webcam -->
+      <video id="video_frame" playsinline autoplay></video>
+   </div>
+
+   <!-- Capturamos la imagen a través de la API web y lo mostramos en el canvas -->
+   <div class="button_controller">
+      <!-- Botón para capturar -->
+      <button id="snap_frame">Capturar Imagen</button>
+      <br><br>
+      <!-- Elemento canvas donde se mostrará la imagen capturada -->
+      <canvas id="canvas_frame"></canvas>
+   </div>
+
+   <!-- Cargamos el Javascript. El atributo async significa que el script es completamente independiente: El navegador no se bloquea con scripts async (como defer ). Otros scripts no esperan por scripts async , y scripts async no espera por ellos.-->
+   <script src="./script.js" async></script>
 </body>
+
 </html>

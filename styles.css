@@ -1,0 +1,52 @@
+@font-face {
+    font-family: 'Glitch Goblin';
+    src: url('/assets/GlitchGoblin.woff2') format('woff2'),
+        url('assets/GlitchGoblin.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    font-family: 'Glitch Goblin';
+    text-align: center;
+    background-color: aliceblue;
+}
+
+h1 {
+    font-family: 'Glitch Goblin';
+    background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 10%, rgba(234,0,255,1) 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#video_wrap {
+    position: absolute;
+}
+
+#video_overlays {
+    position: absolute;
+}
+
+#video_overlays img {
+    width: 500px;
+    height: 350px;
+    object-fit: contain;
+}
+
+#video_frame {
+    width: 480px;
+}
+
+#canvas_frame {
+    width: 320px;
+    height: 200px;
+    float: right;
+}
+
+.button_controller {
+    float: right;
+    border: 1px solid gray;
+    padding: 10px;
+}

@@ -17,7 +17,7 @@ const constraints = {
 //Comprobamos acceso a webcam
 async function init() {
     try {
-        const stream = await navigator.mediaDevices.getUserMedia('constraints');
+        const stream = await navigator.mediaDevices.getUserMedia(constraints);
         handleSuccess(stream);
     } catch (e) {
         errorMsgElement.innerHTML = `navigator.getUserMedia error :${e.toString()}`;
@@ -28,7 +28,13 @@ async function init() {
 async function handleSuccess(stream) {
     //Guardamos el contexto del canvas para hacer la captura
     videoFrame.srcObject = stream;
-    //Mostramos la img que hemos capturado (el frame del video)
+    //Mostramos la img que hemos capturado (el frame del video) en el canvas
+    snapFrame.addEventListener('click', () => {
+        const context = canvasFrame.getContext('2d');
+        canvasFrame.width = videoFrame.videoWidth;
+        canvasFrame.height = videoFrame.videoHeight;
+        context.drawImage(videoFrame, 0, 0, canvasFrame.width, canvasFrame.height);
+    });
 }
 
 //Llamamos al método para iniciar el proceso
